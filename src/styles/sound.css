@@ -1,0 +1,80 @@
+.sound {
+  height: 200svh;
+  width: 100%;
+  padding: 0 10vw;
+  background-color: rgb(223, 203, 165);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.stickycontent {
+  position: sticky;
+  top: 60svh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.soundimg {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  height: 30%;
+  z-index: 5;
+  filter: drop-shadow(10px 20px 20px rgba(0, 0, 0, 1));
+}
+
+.sound h3 {
+  color: #353d46;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 2.75vw, 3rem);
+  margin-bottom: 3%;
+  line-height: 1.1;
+
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.sound p {
+  color: #353d46;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-right: 10%;
+}
+
+/* --- MOBIL NÉZET --- */
+@media (max-width: 768px) {
+  .sound {
+    padding: 0 5vw;
+    height: 150svh;
+    max-width: 100%;
+  }
+
+  .stickycontent {
+    align-items: center;
+    text-align: center;
+    top: 65svh;
+    width: 100%;
+  }
+
+  .sound h3 {
+    width: 90%;
+  }
+
+  .sound p {
+    max-width: 100%;
+  }
+  .soundimg {
+    top: 25%;
+    left: 40%;
+    height: 25%;
+  }
+}

@@ -1,0 +1,32 @@
+.comfort {
+  height: 250svh;
+  width: 100%;
+  margin-top: 15%;
+  display: flex;
+  padding-left: 10vw;
+  background-image: linear-gradient(180deg, rgba(255, 231, 196, 1) 60%, rgba(223, 203, 165, 1) 100%);
+  overflow: hidden;
+}
+h2 {
+  color: #353d46;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 12vw;
+}
+
+@media (max-width: 768px) {
+  .comfort {
+    padding-left: 5vw;
+    height: 150svh;
+    margin-top: 40%;
+  }
+  h2 {
+    font-size: 8svh;
+    font-weight: 900;
+
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}

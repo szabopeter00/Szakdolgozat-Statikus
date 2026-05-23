@@ -1,0 +1,140 @@
+.appearance {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background: radial-gradient(circle, rgb(255, 229, 198) 10%, rgb(255, 216, 157) 70%);
+  overflow: hidden;
+  z-index: 9;
+}
+
+.big-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+
+  font-size: 9vw;
+  font-weight: 900;
+  font-family: sans-serif;
+
+  color: rgba(214, 159, 103, 0.15);
+
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.rotate {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 5svh;
+  height: 5svh;
+
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE / Edge */
+  user-select: none; /* Standard */
+
+  -webkit-user-drag: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  cursor: default;
+}
+
+.appearance-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.3));
+}
+
+.scrollup {
+  position: absolute;
+  top: 90%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 6svh;
+  height: 6svh;
+
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE / Edge */
+  user-select: none; /* Standard */
+
+  -webkit-user-drag: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.scrollup:hover {
+  top: 89%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3svh;
+  justify-content: center;
+  margin-left: 5%;
+  z-index: 1;
+}
+
+.buttons button {
+  width: 4svh;
+  height: 4svh;
+  border-radius: 50%;
+  border: 2px solid #252525;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* --- RESZPONZÍVITÁS --- */
+
+@media (max-width: 768px) {
+  .appearance {
+    background: radial-gradient(circle, rgb(255, 229, 198) 25%, rgb(255, 216, 157) 90%);
+  }
+  .rotate {
+    top: 75%;
+    width: 4svh;
+    height: 4svh;
+  }
+
+  .scrollup {
+    top: 90%;
+    width: 5svh;
+    height: 5svh;
+  }
+  .big-text {
+    font-size: 13vw;
+  }
+
+  .appearance-image {
+    height: auto;
+    width: 70%;
+  }
+}

@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 231, 196);
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* --- ALAPOK --- */
+.logo,
+.big-text,
+.little-text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
+}
+
+img {
+  -webkit-user-select: none; /* Chrome, Safari, Edge */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Edge / IE */
+  user-select: none; /* Standard */
+  -webkit-user-drag: none; /* Chrome, Safari, Edge */
+  user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+#root {
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+  display: block;
+}
+
+.app-container {
+  width: 100%;
+  background: rgb(255, 231, 196);
+  position: relative;
+}
+
+.scroll-container {
+  position: relative;
+  z-index: 20;
+}
+
+.section {
+  width: 100%;
+  min-height: 100svh;
+  position: relative;
+}
